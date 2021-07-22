@@ -211,8 +211,9 @@ y = "##    ##   \n" + \
 z = "#########  \n" + \
     "      ##   \n" + \
     "    ###    \n" + \
-    "  ###      \n" + \
-    " ##        \n" + \
+    "   ##      \n" + \
+    "  ##       \n" + \
+    "###        \n" + \
     "#########  "
 
 space = "       \n" + \
@@ -240,6 +241,87 @@ hyphen = "        \n" + \
              "        \n" + \
              "        \n" + \
              "        "
+
+one =   " #####     \n" + \
+        "##  ##     \n" + \
+        "    ##     \n" + \
+        "    ##     \n" + \
+        "    ##     \n" + \
+        "    ##     \n" + \
+        "######### "
+
+two =   "######### \n" + \
+        "#      ## \n" + \
+        "     #### \n" + \
+        "######### \n" + \
+        "###       \n" + \
+        "##        \n" + \
+        "######### "
+
+three = " #######  \n" + \
+        "#    ##   \n" + \
+        "    #     \n" + \
+        "   ###    \n" + \
+        "     ##   \n" + \
+        "#     ##  \n" + \
+        "########"
+
+four =  "     ###  \n" + \
+        "   ## ##  \n" + \
+        " ##   ##  \n" + \
+        "######### \n" + \
+        "      ##  \n" + \
+        "      ##  \n" + \
+        "      ##"
+
+five =  "######### \n" + \
+        "##        \n" + \
+        "###       \n" + \
+        "######### \n" + \
+        "       ## \n" + \
+        "#     ### \n" + \
+        "#########   "
+
+six =   "########  \n" + \
+        "###       \n" + \
+        "##        \n" + \
+        "########  \n" + \
+        "##     ## \n" + \
+        "##     ## \n" + \
+        "########    "
+
+seven = "######### \n" + \
+        "      ##  \n" + \
+        "     ##   \n" + \
+        "    ##    \n" + \
+        "   ##     \n" + \
+        "  ##      \n" + \
+        " ##         "
+
+eight = "######### \n" + \
+        "##     ## \n" + \
+        "##     ## \n" + \
+        "######### \n" + \
+        "##     ## \n" + \
+        "##     ## \n" + \
+        "#########   "
+
+nine =  "######## \n" + \
+        "#     ## \n" + \
+        "#     ## \n" + \
+        "######## \n" + \
+        "      ## \n" + \
+        "#     ## \n" + \
+        "########   "
+
+
+zero =  "######### \n" + \
+        "##     ## \n" + \
+        "##  #  ## \n" + \
+        "##  #  ## \n" + \
+        "##  #  ## \n" + \
+        "##     ## \n" + \
+        "#########   "
 
 
 asciiAlphabet = list()
@@ -272,6 +354,16 @@ asciiAlphabet.append(z)
 asciiAlphabet.append(space)
 asciiAlphabet.append(underscore)
 asciiAlphabet.append(hyphen)
+asciiAlphabet.append(one)
+asciiAlphabet.append(two)
+asciiAlphabet.append(three)
+asciiAlphabet.append(four)
+asciiAlphabet.append(five)
+asciiAlphabet.append(six)
+asciiAlphabet.append(seven)
+asciiAlphabet.append(eight)
+asciiAlphabet.append(nine)
+asciiAlphabet.append(zero)
 
 romanAlphabet = list()
 romanAlphabet.append('a')
@@ -303,6 +395,16 @@ romanAlphabet.append('z')
 romanAlphabet.append(' ')
 romanAlphabet.append('_')
 romanAlphabet.append('-')
+romanAlphabet.append('1')
+romanAlphabet.append('2')
+romanAlphabet.append('3')
+romanAlphabet.append('4')
+romanAlphabet.append('5')
+romanAlphabet.append('6')
+romanAlphabet.append('7')
+romanAlphabet.append('8')
+romanAlphabet.append('9')
+romanAlphabet.append('0')
 
 
 entry = sys.argv[1]
@@ -314,9 +416,9 @@ for char in entry:
     entryChars.append(char)
 
 myString = ""
-for row in xrange(0, space.split('\n').__len__()):
+for row in range(0, space.split('\n').__len__()):
     for char in entryChars:
         myString += asciiAlphabet[romanAlphabet.index(char)].split('\n')[row]
     myString += "\n"
 
-print myString
+print(myString)
